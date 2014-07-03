@@ -1514,7 +1514,8 @@ body ul#resources li.resource ul.endpoints li.endpoint ul.operations li.operatio
     line-height: 1.5em;
 }
 .model-signature .description span:nth-child(odd)    { color:#333; }
-.model-signature .description span:nth-child(even)    { color:#C5862B; }
+.model-signature .description span:nth-child(even)    { color:#333; }
+/*.model-signature .description span:nth-child(even)    { color:#C5862B; }*/
 .model-signature .signature-nav a {
     text-decoration: none;
     color: #AAA;

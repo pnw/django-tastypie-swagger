@@ -323,9 +323,10 @@
       strong = '<span style="font-weight: bold; color: #000; font-size: 1.0em">';
       stronger = '<span style="font-weight: bold; color: #000; font-size: 1.1em">';
       strongClose = '</span>';
-      classOpen = strong + 'class ' + this.name + '(' + strongClose;
-      classClose = strong + ')' + strongClose;
-      returnVal = classOpen + '<span>' + propertiesStr.join('</span>, <span>') + '</span>' + classClose;
+      classOpen = strong + 'class ' + this.name + '(<br/>' + strongClose;
+      classClose = strong + '<br/>)' + strongClose;
+      returnVal = classOpen + '<span>&nbsp;&nbsp;' + propertiesStr.join('<br/></span><span>&nbsp;&nbsp;') + '</span>' + classClose;
+//      returnVal = classOpen + '<span>' + propertiesStr.join('</span>, <span>') + '</span>' + classClose;
       if (prefix != null) {
         returnVal = stronger + prefix + strongClose + '<br/>' + returnVal;
       }
@@ -399,7 +400,8 @@
 
     SwaggerModelProperty.prototype.toString = function() {
       var str;
-      str = this.name + ': ' + this.dataTypeWithRef;
+      str = '<strong>' + this.name + '</strong>' + ': ' + this.dataTypeWithRef;
+//      str = this.name + ': ' + this.dataTypeWithRef;
       if (this.values != null) {
         str += " = ['" + this.values.join("' or '") + "']";
       }
